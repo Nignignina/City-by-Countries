@@ -1,0 +1,402 @@
+.countryWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 800px;
+
+  padding: 20px;
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.title {
+  height: 400px;
+  width: 40px;
+  position: relative;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+
+  background-color: var(--color-bluelight);
+}
+.countryTitle {
+  font-weight: 800;
+  font-size: 25px;
+  color: var(--color-title);
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  width: 80%;
+}
+.wrapperCountry {
+  /* border: 1px solid; */
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.wrapperCountry::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapperCity {
+  color: var(--color-title);
+  width: 250px;
+  display: flex;
+  height: 350px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  flex-direction: column;
+  box-shadow: 5px 6px 18px -5px #000000;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.wrapperCity:hover {
+  transform: scale(1.1);
+}
+.imageWrapperHover {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    #09115db5 16%,
+    #3664f4 40%,
+    #c0e5ff00 100%
+  );
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  position: absolute;
+  z-index: 1;
+}
+
+.wrapperimage {
+  height: 350px;
+  width: 250px;
+  overflow: hidden;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  position: absolute;
+}
+
+.wrapperimage img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  background-position: center;
+}
+
+.contentCity {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  /* padding-left: 45px; */
+}
+
+.backgroundContent {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid;
+
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 45px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textContent {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 400;
+
+  padding: 5px;
+}
+
+.titleCity {
+  padding: 5px;
+  font-weight: 600px;
+  margin-top: 10px;
+}
+/* .textContent {
+  word-break: break-all;
+} */
+
+.activitiesWrapper {
+  margin-top: 35px;
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding-left: 10px;
+  /* border-radius: 30px; */
+  color: var(--color-blue);
+  margin-bottom: 20px;
+  background-color: #efeff090;
+
+  height: 40px;
+}
+
+.activitiesInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-weight: 600;
+  height: 20px;
+
+  font-size: 12px;
+  width: 30%;
+}
+
+.wrapperNumber {
+  background-color: var(--color-yellow);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  font-weight: 600;
+  color: var(--color-blue);
+}
+
+.descActivity {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 11px;
+  font-weight: 800;
+  padding-right: 10px;
+}
+
+.divButton {
+  margin-top: 90px;
+  background-color: var(--color-yellow);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.buttonCity {
+  border: none;
+  outline: none;
+  background-color: var(--color-yellow);
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.buttonCity :hover {
+  border: none;
+  outline: var(--color-bluelight);
+  background-color: var(--color-bluelight);
+}
+
+@media screen and (min-width: 768px) {
+  /* display */
+  .countryWrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .title {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: flex-start;
+    height: 40px;
+  }
+  .countryTitle {
+    width: auto;
+    justify-content: flex-start;
+    text-orientation: none;
+    writing-mode: horizontal-tb;
+    font-size: 20px;
+    padding-left: 60px;
+    color: var(--color-title);
+  }
+
+  .wrapperCountry {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    overflow-x: none;
+    scroll-snap-type: none;
+    -webkit-overflow-scrolling: unset;
+  }
+
+  /* card and size */
+  .wrapperCity {
+    color: var(--color-title);
+    width: 200px;
+    display: flex;
+    height: 300px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    flex-direction: row;
+    box-shadow: 5px 6px 18px -5px #000000;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .imageWrapperHover {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      #09115db5 16%,
+      #3664f4 40%,
+      #c0e5ff00 100%
+    );
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .wrapperimage {
+    height: 300px;
+    width: 200px;
+  }
+
+  .imageWrapperHover {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      #09115db5 16%,
+      #3664f4 40%,
+      #c0e5ff00 100%
+    );
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .wrapperimage img {
+    object-fit: fill;
+    object-position: center;
+    height: 100%;
+    background-position: center;
+  }
+
+  .textContent {
+    font-size: 9px;
+    padding: 6px;
+  }
+
+  .titleCity {
+    padding: 5px;
+    font-weight: 400px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .buttonCity {
+    border: none;
+    outline: none;
+    background-color: var(--color-yellow);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 400px;
+  }
+  .activitiesInfo {
+    height: 30px;
+    font-size: 10px;
+
+    width: 40%;
+  }
+  .descActivity {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .activitiesWrapper {
+    gap: 10px;
+    padding-left: 10px;
+    height: 50px;
+  }
+
+  .wrapperNumber {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .countryWrapper {
+    max-width: 1400px;
+  }
+
+  .descActivity {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 10px;
+    font-weight: 600;
+  }
+}

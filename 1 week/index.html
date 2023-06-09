@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/http.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <!-- hero -->
+      <div class="hero">
+        <!-- img -->
+        <div class="heroBackground">
+          <img src="./assets/background.jpg" alt="hero background" />
+        </div>
+        <div class="ctaSections">
+          <h1 class="logo">cities by country</h1>
+          <p class="ctaHero">discover all the cities starting by:</p>
+
+          <select class="option" name="country" id="country">
+            <option value="">--Choose a Country--</option>
+            <option value="IT">Italia</option>
+            <option value="FR">Francia</option>
+            <option value="SP">Spagna</option>
+            <option value="PR">Portgallo</option>
+            <option value="GR">Grecia</option>
+            <option value="GE">Germania</option>
+          </select>
+        </div>
+      </div>
+      <!-- append modal -->
+      <div class="modal hidden">
+        <div class="closeModal">
+          <img
+            src="./assets/images/icone-fermer-et-x-orange.png"
+            alt="close button"
+            class="imgCloseModal" />
+        </div>
+      </div>
+      <!-- france -->
+      <div class="countryWrapper">
+        <div class="title">
+          <h2 class="countryTitle">francia</h2>
+        </div>
+
+        <div id="FR"></div>
+      </div>
+
+      <!-- italy-->
+      <div class="countryWrapper">
+        <div class="title">
+          <h2 class="countryTitle">Italia</h2>
+        </div>
+
+        <div id="IT"></div>
+      </div>
+
+      <!-- other -->
+
+      <div class="countryWrapper">
+        <div class="title">
+          <h2 class="countryTitle">Spagna</h2>
+        </div>
+
+        <div id="SP"></div>
+      </div>
+      <!-- other -->
+      <div class="countryWrapper">
+        <div class="title">
+          <h2 class="countryTitle">Portogallo</h2>
+        </div>
+
+        <div id="PR"></div>
+      </div>
+      <!-- other -->
+      <div class="countryWrapper">
+        <div class="title">
+          <h2 class="countryTitle">Grecia</h2>
+        </div>
+
+        <div id="GR"></div>
+      </div>
+      <!-- other -->
+      <div class="countryWrapper">
+        <div class="title">
+          <h2 class="countryTitle">Germania</h2>
+        </div>
+
+        <div id="GE"></div>
+      </div>
+    </main>
+  </body>
+</html>
+
+<!-- 576px for portrait phones.
+768px for tablets.
+992px for laptops.
+1200px for large devices. -->
